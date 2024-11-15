@@ -33,7 +33,7 @@ python -m pip install .
 
 ## Getting Started
 
-For example usage of this library, see the [example jupyter notebook.](./examples/sim_visualization.ipynb) Note that matplotlib library is required for visualization. By changing up the line
+For example usage of this library, see the [example jupyter notebook.](./Examples/sim_visualization.ipynb) Note that matplotlib library is required for visualization. By changing up the line
 ```python
 param_file = './fpvt_muller_brown_potential.json'
 ```
