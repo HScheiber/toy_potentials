@@ -107,7 +107,6 @@ def load_probability_flows(project_folder, params, replicates=None):
     
     return time_points, recycled_weight_cumsum
 
-
 # Computing minimal distance from walker point cloud to each saddle point
 def compute_saddle_point_mindist(args):
     project_dir, replicate_id, saddle_points = args
