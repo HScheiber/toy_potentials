@@ -1,0 +1,23 @@
+{
+    "experiment_name": "Muller_Brown_String",
+    "n_replicates": 50,
+    "n_walkers": 1024,
+    "n_steps_per_iter": 50,
+    "n_iters": 100,
+    "kT": 0.25,
+    "gamma": 1,
+    "integration_step": 1e-4,
+    "min_weight": 1e-20,
+    "potential_type": "muller_brown",
+    "binning_strategy": "string",
+    "n_bins": 32,
+    "smoothing_type": "elastic",
+    "num_basis_functions": 2,
+    "update_rate": 0.5,
+    "smoothing_factor": 0.02,
+    "time_window": 10,
+    "n_walkers_per_bin": 32,
+    "use_resampling": true,
+    "steady_state": true,
+    "n_processes": 8
+}

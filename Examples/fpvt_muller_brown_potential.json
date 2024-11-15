@@ -1,0 +1,17 @@
+{
+    "experiment_name": "Muller_Brown_Potential_FPVT",
+    "n_walkers": 1024,
+    "n_steps_per_iter": 50,
+    "n_iters": 100,
+    "kT": 0.25,
+    "gamma": 1,
+    "integration_step": 1e-4,
+    "min_weight": 1e-20,
+    "potential_type": "muller_brown",
+    "binning_strategy": "FPVT",
+    "n_bins": 64,
+    "n_walkers_per_bin": 16,
+    "use_resampling": true,
+    "steady_state": false,
+    "n_processes": 8
+}
