@@ -107,33 +107,6 @@ def load_probability_flows(project_folder, params, replicates=None):
     
     return time_points, recycled_weight_cumsum
 
-def load_volumes(project_folder, params, replicates=None):
-    """
-    Load probability flow data from each replicate in the experiment folder.
-
-    Parameters:
-    - experiment_folder: Path to the experiment folder.
-    - params: Dictionary of parameters used in the experiment.
-    - replicates: List of replicate IDs to load. If None, all replicates are loaded.
-
-    Returns:
-    - probability_flows: 3D numpy array of shape (N_replicates, N_time_points, N_bins).
-    """
-    experiment_folder = os.path.join(project_folder, params['experiment_name'])
-
-    if replicates is None:
-        replicates = range(params['n_replicates'])
-    
-    # Loop through replicates and load recycled weight data
-    volumes = []
-    for rep in replicates:
-        with open(os.path.join(experiment_folder,f'{rep:03d}','volumes.pkl'), 'rb') as f:
-            volumes.append(pickle.load(f))
-    volumes = np.array(volumes)
-
-    #time_points = np.arange(0,params['n_iters']*params['n_steps_per_iter'])
-    time_points = np.arange(1,params['n_iters']+1) * params['n_steps_per_iter']
-    return time_points, volumes[:,:,-1]
 
 # Computing minimal distance from walker point cloud to each saddle point
 def compute_saddle_point_mindist(args):
